@@ -93,7 +93,7 @@ for user in main_list:
                 run = addvalue(run,run_vals)
     print("\n\n Changing data in tables...(if required)...")            
     
-
+    #Creating files
     print("Creating files...")
     name = f"{user[1]}_{subject}_{pracassign}.docx"      
     doc.save(name)
