@@ -92,23 +92,7 @@ for user in main_list:
                 run.text = run.text.replace(usr3,user[2])
                 run = addvalue(run,run_vals)
     print("\n\n Changing data in tables...(if required)...")            
-    for table in doc.tables:
-        for row in table.rows:
-            for cell in row.cells:
-                for para in cell.paragraphs:
-                    for run in para.runs:
-                        if(run.text.find(usr1) != -1):
-                            run_vals = getvalue(run)
-                            run.text = run.text.replace(usr1,user[0])
-                            run = addvalue(run,run_vals)
-                        if(run.text.find(usr2) != -1):
-                            run_vals = getvalue(run)
-                            run.text = run.text.replace(usr2,user[1])
-                            run = addvalue(run,run_vals)
-                        if(run.text.find(usr3) != -1):
-                            run_vals = getvalue(run)
-                            run.text = run.text.replace(usr3,user[2])
-                            run = addvalue(run,run_vals)
+    
 
     print("Creating files...")
     name = f"{user[1]}_{subject}_{pracassign}.docx"      
